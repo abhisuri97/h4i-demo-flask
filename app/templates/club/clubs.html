@@ -1,0 +1,3 @@
+{% for c in clubs %}
+<li><a href="{{ url_for('club.get_club_info', id=c.id) }}">{{ c }}</a></li>
+{% endfor %}

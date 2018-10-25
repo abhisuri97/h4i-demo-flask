@@ -29,6 +29,9 @@ from app.models import User
 
 account = Blueprint('account', __name__)
 
+@account.route('/', methods=['GET'])
+def index():
+    return render_template('account/index.html')
 
 @account.route('/login', methods=['GET', 'POST'])
 def login():
